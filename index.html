@@ -25,6 +25,111 @@ h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.035em;marg
 .footer-nav{display:flex;justify-content:space-between;align-items:center;margin-top:38px;padding-top:18px;border-top:1px solid var(--line)}.footer-nav button{border:1px solid #d8e0e9;background:#fff;color:var(--navy);padding:9px 13px;border-radius:8px;cursor:pointer;font-weight:700;font-size:12px}.footer-nav button:disabled{opacity:.35;cursor:default}.count{font-size:11px;color:#8491a1}
 @media(max-width:900px){.shell{grid-template-columns:1fr}.side{height:auto;position:relative;padding:16px}.brand{padding:0}.navlabel,.sidefoot{display:none}nav{display:flex;overflow:auto;padding:4px 0 2px;gap:5px}nav button{white-space:nowrap;padding:9px 10px;font-size:11px}nav button span{display:none}.top{padding:12px 20px}.panel{padding-top:28px}.flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.metrics{grid-template-columns:repeat(2,1fr)}.grid2,.grid3,.casebody{grid-template-columns:1fr}.brands{grid-template-columns:repeat(3,1fr)}.casehead{align-items:flex-start;flex-direction:column}.flow{grid-template-columns:repeat(2,1fr)}.top{position:relative}}
+
+/* APPLE-INSPIRED EDITORIAL EXPERIENCE */
+:root{--navy:#101820;--ink:#18212b;--muted:#68727d;--gold:#a88756;--line:#e8eaed;--paper:#fff;--white:#fff}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#fff;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;line-height:1.55;letter-spacing:-.012em}
+.shell{display:block;min-height:100vh}
+.side{height:76px;position:sticky;top:0;z-index:20;padding:0 clamp(18px,5vw,72px);display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:28px;background:rgba(255,255,255,.84);border-bottom:1px solid rgba(0,0,0,.07);backdrop-filter:saturate(180%) blur(20px);color:#111}
+.brand{padding:0;gap:10px;flex-shrink:0}
+.monogram{width:34px;height:34px;border-radius:50%;background:#111;color:#fff;border:0;font-size:12px}
+.brand strong{color:#111;font-size:13px;letter-spacing:-.02em}
+.brand small{color:#73777d;font-size:10px}
+.navlabel,.sidefoot{display:none}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:3px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{white-space:nowrap;color:#50545a;font-size:11px;padding:8px 10px;border-radius:999px;gap:6px}
+nav button span{display:none}
+nav button:hover{background:#f3f4f5;color:#111}
+nav button.active{background:#111;color:#fff;box-shadow:none}
+main{min-width:0}
+.top{display:none}
+.panel,.panel.active{display:block;max-width:none;margin:0;padding:clamp(76px,10vw,144px) clamp(22px,9vw,150px);animation:none;scroll-margin-top:76px}
+.panel:nth-of-type(even){background:#f5f5f7}
+.panel:nth-of-type(odd){background:#fff}
+.panel>.kicker{font-size:11px;letter-spacing:.14em;color:#8b7048;margin-bottom:18px}
+h2{font-size:clamp(38px,6vw,72px);line-height:1.04;letter-spacing:-.055em;font-weight:650;max-width:980px;margin:0 0 22px;color:#1d1d1f}
+.lead{font-size:clamp(17px,2vw,22px);line-height:1.45;letter-spacing:-.025em;color:#6e6e73;max-width:850px;margin:0 0 52px}
+.hero{min-height:min(720px,78vh);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:#f5f5f7;color:#1d1d1f;border-radius:28px;padding:clamp(34px,8vw,100px);overflow:hidden}
+.hero:after{content:"";right:-8%;bottom:-55%;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9e1e8 0,#c4ced8 35%,#f5f5f7 70%);font-size:0;color:transparent;z-index:0}
+.hero>*{position:relative;z-index:1}
+.hero .kicker{font-size:12px;letter-spacing:.12em;color:#6e6e73}
+.hero h1{font-size:clamp(48px,8.3vw,108px);line-height:.98;letter-spacing:-.075em;font-weight:700;max-width:1050px;margin:0 0 28px;color:#111}
+.hero p{font-size:clamp(18px,2.2vw,25px);line-height:1.4;letter-spacing:-.03em;color:#65666b;max-width:740px}
+.actions{margin-top:34px}
+.btn{border-radius:999px;padding:13px 21px;font-size:13px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:#111;color:#fff}
+.btn.ghost{border:1px solid #b7bbc0;color:#222}
+.metrics{grid-template-columns:repeat(4,1fr);gap:0;margin:42px 0 68px;border-top:1px solid #dedfe2;border-bottom:1px solid #dedfe2}
+.metric{background:transparent;border:0;border-radius:0;padding:30px 22px 30px 0}
+.metric strong{font-size:clamp(38px,5vw,64px);letter-spacing:-.065em;font-weight:650;color:#111}
+.metric span{font-size:13px;color:#74777c;max-width:170px}
+.grid2,.grid3{gap:14px}
+.card{background:#fff;border:1px solid #e5e5e7;border-radius:20px;padding:28px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
+.card h3{font-size:22px;letter-spacing:-.035em;color:#17191c}
+.card p{font-size:15px;line-height:1.55;color:#6e7075}
+.num{font-size:10px;letter-spacing:.13em;color:#9a7b4f}
+.flow{gap:10px}
+.step{border:1px solid #e5e5e7;border-radius:16px;padding:20px;background:#fff}
+.step strong{font-size:15px}
+.principle{padding:5px 0 5px 18px}
+.principle h3{font-size:19px}
+.principle p{font-size:14px}
+.case{border:1px solid #e5e5e7;border-radius:22px;margin:24px 0;box-shadow:0 6px 24px rgba(0,0,0,.025)}
+.casehead{background:#f5f5f7;padding:26px 30px}
+.casehead h3{font-size:clamp(20px,2.4vw,28px);letter-spacing:-.04em}
+.casehead small{font-size:10px;letter-spacing:.1em}
+.casebody{padding:30px;gap:28px}
+.casebody h4{font-size:10px;letter-spacing:.13em}
+.casebody p{font-size:14px;line-height:1.65;color:#5e636a}
+.result{background:#111;border-radius:16px;padding:22px}
+.result b{font-size:clamp(24px,3vw,36px);letter-spacing:-.04em}
+.result span{font-size:12px;line-height:1.45}
+.brands{gap:12px}
+.brand{border-radius:16px;border-color:#e5e5e7;background:#fff}
+.note{font-size:12px;color:#85888d;line-height:1.6}
+.timeline{gap:32px}
+.job h3{font-size:22px}
+.job p{font-size:15px;line-height:1.6}
+.tools span{background:#fff;border-color:#e5e5e7;padding:10px 16px;font-size:13px}
+.footer-nav{display:none}
+.panel>.card[style*="margin-top"]{margin-top:32px!important}
+.panel:after{content:"";display:block;height:1px}
+@media(max-width:900px){
+ .side{height:auto;min-height:70px;flex-wrap:wrap;padding:12px 18px;gap:10px}
+ nav{width:100%;justify-content:flex-start}
+ nav button{font-size:10px;padding:8px 11px}
+ .panel,.panel.active{padding:72px 24px}
+ .hero{min-height:650px;border-radius:22px}
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .metric:nth-child(2){border-left:1px solid #dedfe2;padding-left:20px}
+ .metric:nth-child(3){border-top:1px solid #dedfe2}
+ .metric:nth-child(4){border-top:1px solid #dedfe2;border-left:1px solid #dedfe2;padding-left:20px}
+}
+@media(max-width:600px){
+ .side{position:sticky;top:0}
+ .brand small{display:none}
+ .panel,.panel.active{padding:58px 18px}
+ .hero{min-height:620px;padding:30px 24px}
+ .hero:after{width:90vw;height:90vw;right:-35%;bottom:-25%}
+ .metrics{margin:30px 0 44px}
+ .metric{padding:22px 10px 22px 0}
+ .metric strong{font-size:40px}
+ .metric span{font-size:11px}
+ .grid2,.grid3,.casebody{grid-template-columns:1fr}
+ .casehead{padding:22px;flex-direction:column;align-items:flex-start}
+ .casebody{padding:22px}
+ .brands{grid-template-columns:repeat(2,1fr)}
+ .flow{grid-template-columns:repeat(2,1fr)}
+ .timeline{padding-left:20px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+ .reveal.visible{opacity:1;transform:none}
+}
 </style></head><body>
 <div class="shell"><aside class="side"><div class="brand"><div class="monogram">CG</div><div><strong>Cristian Gutiérrez</strong><small>Customer Success · Account Management</small></div></div>
 <div class="navlabel">Explorar portafolio</div><nav id="nav">
@@ -97,5 +202,45 @@ h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.035em;marg
 <div class="footer-nav"><button id="prev" disabled>← Anterior</button><span class="count" id="count">01 / 08</span><button id="next">Siguiente →</button></div>
 </main></div>
 <script>
-(()=>{const ids=['inicio','filosofia','resultados','casos','situaciones','cartera','metodo','trayectoria','herramientas'];const names=['Inicio','Mi enfoque','Resultados','Casos de éxito','Situaciones reales','Cuentas y marcas','Gestión de clientes','Trayectoria','Herramientas'];const panels=[...document.querySelectorAll('.panel')],buttons=[...document.querySelectorAll('nav button')];let current=0;function show(i){current=Math.max(0,Math.min(ids.length-1,i));panels.forEach((p,n)=>p.classList.toggle('active',n===current));buttons.forEach((b,n)=>b.classList.toggle('active',n===current));document.getElementById('crumb').textContent=names[current];document.getElementById('count').textContent=String(current+1).padStart(2,'0')+' / '+String(ids.length).padStart(2,'0');document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===ids.length-1;history.replaceState(null,'','#'+ids[current]);window.scrollTo({top:0,behavior:'smooth'});}buttons.forEach((b,i)=>b.addEventListener('click',()=>show(i)));document.getElementById('prev').addEventListener('click',()=>show(current-1));document.getElementById('next').addEventListener('click',()=>show(current+1));const start=ids.indexOf(location.hash.slice(1));show(start>=0?start:0);})();
+(()=> {
+ const ids=['inicio','filosofia','resultados','casos','situaciones','cartera','metodo','trayectoria','herramientas'];
+ const names=['Inicio','Mi enfoque','Resultados','Casos de éxito','Situaciones reales','Cuentas y marcas','Gestión de clientes','Trayectoria','Herramientas'];
+ const sections=ids.map(id=>document.getElementById(id)).filter(Boolean);
+ const buttons=[...document.querySelectorAll('nav button')];
+ const crumb=document.getElementById('crumb');
+ const count=document.getElementById('count');
+ let active=0;
+ function setActive(i){
+  active=i;
+  buttons.forEach((b,n)=>b.classList.toggle('active',n===i));
+  if(crumb) crumb.textContent=names[i]||'';
+  if(count) count.textContent=String(i+1).padStart(2,'0')+' / '+String(ids.length).padStart(2,'0');
+ }
+ buttons.forEach((b,i)=>b.addEventListener('click',()=>{
+  const target=document.getElementById(ids[i]);
+  if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+ }));
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){
+    const i=ids.indexOf(entry.target.id);
+    if(i>=0)setActive(i);
+   }
+  });
+ },{rootMargin:'-25% 0px -60% 0px',threshold:0});
+ sections.forEach(s=>observer.observe(s));
+ document.querySelectorAll('.panel > *, .hero, .metric, .case, .card, .step, .job').forEach(el=>el.classList.add('reveal'));
+ const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  });
+ },{threshold:.08});
+ document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+ const start=ids.indexOf(location.hash.slice(1));
+ if(start>=0)setTimeout(()=>document.getElementById(ids[start])?.scrollIntoView(),80);
+ setActive(Math.max(0,start));
+ const prev=document.getElementById('prev'),next=document.getElementById('next');
+ if(prev)prev.addEventListener('click',()=>document.getElementById(ids[Math.max(0,active-1)])?.scrollIntoView({behavior:'smooth'}));
+ if(next)next.addEventListener('click',()=>document.getElementById(ids[Math.min(ids.length-1,active+1)])?.scrollIntoView({behavior:'smooth'}));
+})();
 </script></body></html>
