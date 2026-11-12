@@ -27,6 +27,29 @@ h2{font-size:clamp(40px,6.5vw,76px);line-height:1.02;letter-spacing:-.065em;font
 @media(max-width:900px){.side{height:auto;min-height:58px;flex-wrap:wrap;padding:10px 18px;gap:8px}nav{width:100%;justify-content:flex-start}nav button{font-size:10px;padding:7px 10px}.panel,.panel.active{padding:72px 24px}.hero{min-height:650px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2),.metric:nth-child(4){padding-left:20px;border-left:1px solid #d2d2d7}.metric:nth-child(3),.metric:nth-child(4){border-top:1px solid #d2d2d7}.flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.side{position:sticky;top:0}.brand small{display:none}.panel,.panel.active{padding:58px 18px}.hero{min-height:620px;padding:30px 24px;border-radius:24px}.hero:after{width:95vw;height:95vw;right:-40%;bottom:-18%;opacity:.75}.hero h1{font-size:clamp(46px,13vw,68px)}.metrics{margin-bottom:48px}.metric{padding:22px 10px 22px 0}.metric strong{font-size:40px}.metric span{font-size:11px}.grid2,.grid3,.casebody{grid-template-columns:1fr}.card{padding:24px;border-radius:20px}.casehead{padding:23px;flex-direction:column;align-items:flex-start}.casebody{padding:23px;gap:24px}.brands{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(2,1fr)}.timeline{padding-left:22px}}
 @media(prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}}
+
+/* PRODUCT-PAGE STORYTELLING */
+.panel:not(#inicio){position:relative}
+.product-stage{position:relative;isolation:isolate;overflow:hidden;min-height:560px;margin:0 0 76px;padding:clamp(34px,6vw,82px);border-radius:32px;background:linear-gradient(135deg,#f5f5f7 0%,#f5f5f7 52%,#e7eaf0 100%);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);align-items:center;gap:28px}
+.product-stage .kicker{grid-column:1/-1;align-self:end;margin:0 0 2px;color:#6e6e73;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.product-stage h2{position:relative;z-index:2;font-size:clamp(42px,6.3vw,78px);line-height:.98;letter-spacing:-.07em;max-width:760px;margin:0 0 22px}
+.product-stage .lead{position:relative;z-index:2;font-size:clamp(17px,2vw,22px);max-width:620px;margin:0;color:#6e6e73}
+.product-stage .product-copy{position:relative;z-index:2}
+.product-art{position:relative;min-height:330px;display:grid;place-items:center;overflow:hidden}
+.product-art .orb{width:min(29vw,330px);height:min(29vw,330px);min-width:220px;min-height:220px;border-radius:50%;background:radial-gradient(circle at 32% 26%,#fff 0%,#e3eaf2 16%,#aebfd1 38%,#718ba7 58%,#dce3eb 75%);box-shadow:inset -18px -24px 45px #526a8230,0 35px 70px #63788b2b;animation:floatOrb 7s ease-in-out infinite}
+.product-art .orbit{position:absolute;width:92%;height:40%;border:1px solid #8294a733;border-radius:50%;transform:rotate(-28deg)}
+.product-art .orbit.two{transform:rotate(35deg);width:78%;height:52%}
+.product-art .art-number{position:absolute;font-size:clamp(100px,16vw,210px);font-weight:750;letter-spacing:-.1em;color:#1d1d1f0b;line-height:1}
+.product-stage:nth-of-type(3) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#e8e6f4 18%,#aaa7ce 42%,#6d6a9d 68%,#dfe0ed 80%)}
+.product-stage:nth-of-type(4) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#f2e8dc 18%,#d7b58d 42%,#9c7654 68%,#eee2d5 80%)}
+.product-stage:nth-of-type(5) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#e4f0ed 18%,#9abeb6 42%,#527f78 68%,#e1ece9 80%)}
+.product-stage:nth-of-type(6) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#e9edf5 18%,#aebbd2 42%,#657a9e 68%,#e2e7ef 80%)}
+.product-stage:nth-of-type(7) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#f4e9e7 18%,#d9aaa2 42%,#a46d68 68%,#f0e3e1 80%)}
+.product-stage:nth-of-type(8) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#e9ece7 18%,#b7c1a9 42%,#78866a 68%,#e6e9e1 80%)}
+.product-stage:nth-of-type(9) .orb{background:radial-gradient(circle at 30% 25%,#fff 0%,#e9e9e9 18%,#b9bec4 42%,#737d89 68%,#e5e7e9 80%)}
+@keyframes floatOrb{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(5deg)}}
+@media(max-width:800px){.product-stage{grid-template-columns:1fr;min-height:0;padding:34px 26px;gap:0}.product-stage .kicker{grid-column:auto}.product-art{min-height:230px}.product-art .orb{width:220px;height:220px}.product-stage h2{font-size:clamp(40px,10vw,62px)}}
+@media(prefers-reduced-motion:reduce){.product-art .orb{animation:none}}
 </style></head><body>
 <div class="shell"><aside class="side"><div class="brand"><div class="monogram">CG</div><div><strong>Cristian Gutiérrez</strong><small>Customer Success · Account Management</small></div></div>
 <div class="navlabel">Explorar portafolio</div><nav id="nav">
@@ -140,4 +163,31 @@ h2{font-size:clamp(40px,6.5vw,76px);line-height:1.02;letter-spacing:-.065em;font
  if(prev)prev.addEventListener('click',()=>document.getElementById(ids[Math.max(0,active-1)])?.scrollIntoView({behavior:'smooth'}));
  if(next)next.addEventListener('click',()=>document.getElementById(ids[Math.min(ids.length-1,active+1)])?.scrollIntoView({behavior:'smooth'}));
 })();
+
+<script>
+(()=> {
+ const ids=['inicio','filosofia','resultados','casos','situaciones','cartera','metodo','trayectoria','herramientas'];
+ ids.slice(1).forEach((id,i)=>{
+  const section=document.getElementById(id); if(!section || section.querySelector('.product-stage')) return;
+  const kicker=section.querySelector(':scope > .kicker');
+  const heading=section.querySelector(':scope > h2');
+  const lead=section.querySelector(':scope > .lead');
+  if(!heading || !lead) return;
+  const stage=document.createElement('div'); stage.className='product-stage';
+  const copy=document.createElement('div'); copy.className='product-copy';
+  const art=document.createElement('div'); art.className='product-art';
+  art.innerHTML='<div class="art-number">'+String(i+2).padStart(2,'0')+'</div><div class="orbit"></div><div class="orbit two"></div><div class="orb"></div>';
+  if(kicker) stage.appendChild(kicker);
+  copy.appendChild(heading); copy.appendChild(lead);
+  stage.appendChild(copy); stage.appendChild(art);
+  section.insertBefore(stage,section.firstChild);
+ });
+ const first=document.querySelector('#inicio .hero');
+ if(first && !first.querySelector('.product-art')){
+  const art=document.createElement('div'); art.className='product-art';
+  art.innerHTML='<div class="art-number">01</div><div class="orbit"></div><div class="orbit two"></div><div class="orb"></div>';
+  first.appendChild(art);
+ }
+})();
+</script>
 </script></body></html>
